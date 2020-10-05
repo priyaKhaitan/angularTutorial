@@ -1,1 +1,3 @@
-<h1>Server component</h1>
+<p [ngStyle]="{backgroundColor: getColor()}"
+[ngClass]="{online: serverStatus === 'online'}">
+{{serverStatus}}</p>
