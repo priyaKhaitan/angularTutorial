@@ -7,10 +7,13 @@ import { Recipe } from '../recipe.model';
   styleUrls: ['./recipe-list.component.css']
 })
 export class RecipeListComponent implements OnInit {
-    recipes: Recipe[] = [
-      new Recipe('Palak Paneer','Cottage Cheese with spinach','https://www.cookwithkushi.com/wp-content/uploads/2016/05/IMG_9736_.jpg')
-    ]; //typescript now knows that only thing which will get stored in this
-  //recipes property is the couple of recipe object.
+recipes: Array<Recipe> = [
+  new Recipe(
+  'Palak Paneer',
+  'An Indian curry made out of spinach and cottage cheese',
+  'https://upload.wikimedia.org/wikipedia/commons/8/8d/Palak_Paneer_%28Cottage_cheese_in_spinach_gravy%29.jpg'
+  ),
+];
   constructor() { }
 
   ngOnInit(): void {

@@ -2,11 +2,29 @@
     <div class="col-xs-10">
         <app-shopping-edit></app-shopping-edit>
         <hr>
+        <!-- <h1>
+            <ng-container *ngTemplateOutlet = "companyText"></ng-container>
+        </h1> -->
         <ul class="list-group">
-            <a href="#" class="list-group-item"
-            style="cursor: pointer" *ngFor="let ingredient of ingredients">
+            <a class="list-group-item" style="cursor: pointer"
+            *ngFor="let ingredient of ingredients">
             {{ingredient.name}} ({{ingredient.amount}})
             </a>
         </ul>
     </div>
 </div>
+
+<!-- This is to solve the issue of ng-template with *ngIf -->
+<!-- <ng-template *ngIf="home then goHome"></ng-template>
+<ng-template #goHome>Go Home</ng-template> -->
+<!-- <div class="row">
+    <div class="footer">
+        <ng-content></ng-content>the code for ng-content is written in parent component we can also have select
+        attribute within ng-content to decide which content to project.
+    </div>
+</div> -->
+<!-- Scenario when ngTemplateOutlet is used as a container to templates that can be reused at multiple places. 
+    <div class="row">
+    <ng-container *ngTemplateOutlet = "companyText"></ng-container>
+</div>
+<ng-template #companyText>Company Text</ng-template> -->
