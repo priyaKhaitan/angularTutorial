@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -12,4 +12,7 @@ export class AppComponent {
   onNavigate(feature:string){
     this.loadedFeature = feature;
   }
+  // @HostListener('mouseenter') featureSelected(eventData: Event) {
+   
+  // }
 }
