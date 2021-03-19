@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, HostBinding, HostListener, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -12,4 +12,10 @@ export class HeaderComponent {
  onSelect(feature:string){
 this.featureSelected.emit(feature);
  }
+
+//  @HostBinding('class.highlight') get hasHighlight() { return true; }
+//  @HostBinding('class.box') get hasBox() { return true }
+ 
+ @HostListener('featureSelected') onClick(eventData: Event) {
+}
 }
